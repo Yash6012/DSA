@@ -70,8 +70,11 @@ public:
         if (front == -1 && rear == -1) {
             return 0;
         }
+        else if (rear >= front){
+            return rear - front + 1;
+        }
         else {
-            return abs(rear - front) + 1;
+            return n - front + rear + 1;
         }
     }
     bool isEmpty() {
