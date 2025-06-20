@@ -39,6 +39,7 @@ int main() {
     q.push(90);
     q.push(100);
     q.push(110);
+    // size of queue
     int count = q.size();
     int k = 3;
     reverseKGroup(q, count, k);
