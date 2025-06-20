@@ -58,12 +58,27 @@ public:
             front++;
         }
     }
+    int getFront() {
+        if (front == -1) {
+            cout << "Empty Queue" << endl;
+        }
+        else {
+            return arr[front];
+        }
+    }
+    int getSize() {
+        if (front == -1 && rear == -1) {
+            return 0;
+        }
+        else {
+            return abs(rear - front) + 1;
+        }
+    }
+    bool isEmpty() {
+        if (front == -1 && rear == -1) {
+            return true;
+        }
+        return false;
+    }
 };
 
-CircularQueue::CircularQueue(int size)
-{
-}
-
-CircularQueue::~CircularQueue()
-{
-}
