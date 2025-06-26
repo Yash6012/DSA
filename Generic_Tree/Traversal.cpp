@@ -39,6 +39,28 @@ class TreeNode{
         // R
         preorder(root -> right);
     }
+    void inorder(TreeNode* root) {
+        if (root == NULL) {
+            return;
+        }
+        // LNR
+        // L
+        inorder(root -> left);
+        cout << root -> val << endl;
+        // R
+        preorder(root -> right);
+    }
+    void postorder(TreeNode* root) {
+        if (root == NULL) {
+            return;
+        }
+        // LRN
+        // L
+        postorder(root -> left);
+        // R
+        postorder(root -> right);
+        cout << root -> val << endl;
+    }
 };
 
 int main() {
