@@ -28,14 +28,14 @@ Info solve(TreeNode *root) {
         return temp;
     }
     // leaf Node
-    if (root->left == NULL && root->right == NULL)
-    {
-        Info temp;
-        temp.minval = root->val;
-        temp.maxval = root->val;
-        temp.isB = true;
-        return temp;
-    }
+    // if (root->left == NULL && root->right == NULL)
+    // {
+    //     Info temp;
+    //     temp.minval = root->val;
+    //     temp.maxval = root->val;
+    //     temp.isB = true;
+    //     return temp;
+    // }
     // LRN
     Info leftA = solve(root->left);
     Info rightA = solve(root->right);
