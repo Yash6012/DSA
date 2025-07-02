@@ -38,3 +38,9 @@ Info solve(TreeNode *root)
     currA.isB = (root->val > leftA.maxval && root->val < rightA.minval && leftA.isB && rightA.isB);
     return currA;
 }
+bool isValidBST(TreeNode *root)
+{
+    Info temp;
+    temp = solve(root);
+    return temp.isB;
+}
