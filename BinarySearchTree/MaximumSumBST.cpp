@@ -30,6 +30,17 @@ Info solve(TreeNode *root, int &sum)
         sum = max(sum, temp.sum);
         return temp;
     }
+    // Leaf Node
+    if (root->left == NULL && root->right == NULL)
+    {
+        Info temp;
+        temp.minval = root->val;
+        temp.maxval = root->val;
+        temp.sum = root->val;
+        sum = max(sum, temp.sum);
+        temp.isB = true;
+        return temp;
+    }
     // LRN
     Info leftA = solve(root->left, sum);
     Info rightA = solve(root->right, sum);
