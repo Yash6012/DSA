@@ -1,15 +1,23 @@
 #include <iostream>
+#include<climits>
 using namespace std;
+ struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+};
 
-class Info
-{
+class Info {
 public:
     long long minval;
     long long maxval;
     bool isB;
 };
-Info solve(TreeNode *root)
-{
+
+Info solve(TreeNode *root) {
     // Base Case
     if (root == NULL)
     {
@@ -38,8 +46,8 @@ Info solve(TreeNode *root)
     currA.isB = (root->val > leftA.maxval && root->val < rightA.minval && leftA.isB && rightA.isB);
     return currA;
 }
-bool isValidBST(TreeNode *root)
-{
+
+bool isValidBST(TreeNode *root) {
     Info temp;
     temp = solve(root);
     return temp.isB;
