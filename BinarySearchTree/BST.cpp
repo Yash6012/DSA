@@ -11,7 +11,7 @@ class TreeNode{
         left = NULL;
         right = NULL;
     }
-    // First
+    // Second
     TreeNode* bst(TreeNode* root, int val) {
         if (root == NULL) {
             root = new TreeNode(val);
