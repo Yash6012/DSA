@@ -15,6 +15,7 @@ public:
     long long minval;
     long long maxval;
     bool isB;
+    // Test
 };
 
 Info solve(TreeNode *root) {
